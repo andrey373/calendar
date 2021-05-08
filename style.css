@@ -1,0 +1,68 @@
+
+.calendar{
+    width: 250px;
+    height: 330px;
+    color: #fff;
+    margin: 70px auto 0;
+    padding: 30px 20px;
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 10px;
+    background-color: rgb(68, 68, 68);
+}
+.info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.calendar_title,
+.calendar_date{
+    display: flex;
+}
+.calendar_date{
+    height: 216px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.day_name,
+.day{
+    background-color: rgb(75, 40, 11);
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+}
+.day_name:not(:last-child),
+.day:not(:nth-child(7n + 7)){
+    margin-right: 3px;
+}
+
+.day{
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.prev_day,
+.next_day{
+    color: grey;
+}
+.today{
+    background-color: bisque;
+}
+
+.arrows{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.arrow{
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow:not(:last-child){
+    margin-right: 5px;
+}
