@@ -5,6 +5,7 @@ let rightBtn = calendar.querySelector('.arrow_right');
 let infoYear = calendar.querySelector('.info_year');
 let infoMonth = calendar.querySelector('.info_month');
 let infoDay = calendar.querySelector('.info_day');
+let infoWrap = calendar.querySelector('.info_wrap');
 let dayItem = document.createElement('div');
     dayItem.classList.add('day');
 
@@ -81,6 +82,9 @@ function fun(){
 
         arrThisMonthDays.forEach(elDay => {
             calendarDate.appendChild(elDay);
+            if(elDay.textContent == date.getDate()){
+                elDay.classList.add('today');
+            }
         });
 
         arrNextMonthDays.forEach(elNextDay => {

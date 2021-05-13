@@ -9,10 +9,18 @@
 <body>
 
     <div class="calendar">
-        <div class="info">
-            <span class="info_day"></span>
-            <span class="info_month"></span>
-            <span class="info_year"></span>
+        <div class="info_wrap">
+            <div class="info">
+                <span class="info_day"></span>
+                <span class="info_month"></span>
+                <span class="info_year"></span>
+            </div>
+
+            <div class="timer">
+                <span class="time_number time_hour"></span> &#58; 
+                <span class="time_number time_minute"></span> &#58;
+                <span class="time_number time_second"></span>
+            </div>
         </div>
             <div class="calendar_table" border="1px">
                 <div class="calendar_title">
@@ -29,11 +37,12 @@
                 </div>
             </div>
             <div class="arrows">
-                <button class="arrow arrow_left">&larr;</button>
-                <button class="arrow arrow_right">&rarr;</button>
+                <button class="arrow arrow_left">&#10147;</button>
+                <button class="arrow arrow_right">&#10147;</button>
             </div>
     </div>
-
+    
     <script src="./main.js"></script>
+    <script src="./time.js"></script>
 </body>
 </html>
