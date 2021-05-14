@@ -6,6 +6,8 @@ let infoYear = calendar.querySelector('.info_year');
 let infoMonth = calendar.querySelector('.info_month');
 let infoDay = calendar.querySelector('.info_day');
 let infoWrap = calendar.querySelector('.info_wrap');
+let monthList = calendar.querySelector('.month_list');
+let monthItem = monthList.querySelectorAll('.month_item');
 let dayItem = document.createElement('div');
     dayItem.classList.add('day');
 
@@ -132,6 +134,22 @@ rightBtn.addEventListener('click', () => {
     changeYear();
 })
 
+infoMonth.addEventListener('click', () => {
+    monthList.classList.add('month_list--open');
+});
+
+monthItem.forEach((el) => {
+    el.addEventListener('click', () => {
+        monthList.classList.remove('month_list--open');
+        month = Number(el.dataset.numMonth);
+        infoChangeMonth = Number(el.dataset.numMonth) -1;
+        fun();
+        changeMonth(infoChangeMonth);
+        changeYear();
+    })
+});
+
 fun();
 changeMonth(infoChangeMonth);
 changeYear();
+

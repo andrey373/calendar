@@ -1,6 +1,6 @@
 
 function timer(){
-    let time = new Date(), 
+    let time = new Date(),
     timeHour = time.getHours(),
     timeMinutes = time.getMinutes(),
     timeSeconds = time.getSeconds(),
@@ -14,4 +14,9 @@ function timer(){
 }
 
 timer();
-setInterval(timer, 1000);
+
+function changeTimerSeconds(){
+    setInterval(timer, new Date().getMilliseconds());
+}
+
+setInterval(changeTimerSeconds, 300);
